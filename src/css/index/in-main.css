@@ -1,0 +1,109 @@
+/* fonte Montserrat do Google Fonts */
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Red Hat Text', sans-serif;
+}
+
+.welcome{
+    text-align: center;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.logo{
+    width: 100%;
+    min-height: 60vh;
+    background-color: black;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+
+.card{
+    color: white;
+}
+
+.jacare{
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-size: cover;
+    background-position: center;
+
+}
+
+.center{
+    display: flex;
+    max-width: 320px;
+    background-color: rgba(108, 108, 108, 0.288);
+    flex-direction: column;
+    align-items: center;
+    border-radius: .5em;
+    text-align: center;
+}
+
+.card a{
+    background-color: rgba(0, 0, 0, 0.729);
+    border-radius: 8px;
+    margin: 10px;
+}
+
+.btd{
+    width: 90%;
+    height: 200px;
+    background-size: cover;
+    background-position: center;
+    margin-top: 20px;
+    border-radius: .3em;
+}
+
+.second {
+    flex-direction: row;
+    gap: 1.6em;
+    background-attachment: fixed;
+    height: 1200px;
+}
+
+footer{
+    width: 100%;
+    min-height: 60vh;
+    background-color: black
+}
+
+.links{
+    color: white;
+}
+
+a{
+    display: inline-block;
+    padding: 1em 3.5em;
+    color: white;
+    text-decoration: none;
+    letter-spacing: .5px;
+    font-size: .875rem;
+    font-weight: bold;
+    letter-spacing: .5px;
+}
+
+p {
+    max-width: 52ch;
+    line-height: 1.5;
+    padding: 1em;
+    text-align: justify;
+}
+
+h3 {
+    font-weight: 700;
+    font-size: 1.6rem;
+    margin-top: 1em;
+}
