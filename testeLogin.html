@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Ultraviolence</title>
+
+    <link rel="stylesheet" href="src/css/register-login/re-lo-main.css">
+
+
+    <link rel="stylesheet" href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css" />
+
+</head>
+
+<body>
+    <header>
+        <img src="src/assets/images/uv.jpg" alt="">
+        <div class="header-link">
+            <a href="https://www.instagram.com/whatswrongedu/" target="_blank"><i
+                    class="icon ion-logo-instagram"></i></a>
+            <a href="https://github.com/whatswrongedu" target="_blank"><i class="icon ion-logo-github"></i></a>
+            <a href="index.html" class="btn-header">Voltar ao início</a>
+        </div>
+    </header>
+    <main>
+        <div class="navigation">
+            <div class="lanaGifs">
+                <img src="src/assets/gifs/sof.gif" alt="smoking lana">
+                <br>
+                <img src="src/assets/gifs/sing.gif" alt="lana singing">
+                <br>
+                <img src="src/assets/gifs/facecard.gif" alt="lana facecard">
+            </div>
+
+            <div class="form">
+                <h2>Faça seu login</h2>
+                <form action="src/php/register.php" method="POST">
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="senha">Senha:</label>
+                        <input type="password" id="senha" name="senha" required>
+                    </div>
+                    <button type="submit" class="button">Fazer Login</button>
+                </form>
+            </div>
+        </div>
+    </main>
+
+</body>
+
+</html>

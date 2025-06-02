@@ -23,6 +23,42 @@ header img {
     width: 200px;
 }
 
+.header-navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: black;
+    padding: 12px;
+}
+
+.header-search {
+    display: flex;
+    align-items: center;
+    width: 364px;
+    height: 48px;
+    margin-left: 8px;
+    background-color: #141414;
+    border-radius: 10px;
+    border: 1px solid transparent;
+}
+
+.header-search img {
+    width: 16px;
+    height: 16px;
+    margin-left: 10px;
+}
+
+.header-search input {
+    background: transparent;
+    border: none;
+    padding: 0px 100px 0px 12px;
+    color: white;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    outline: none;
+}
+
 .icon,
 a {
     font-size: 1.1rem;
@@ -32,6 +68,7 @@ a {
 .header-link {
     display: flex;
     gap: 20px;
+    align-items: center;
 }
 
 .btn-header,
@@ -107,18 +144,26 @@ main {
 .img-wrapper a {
     overflow: hidden;
     display: block;
-    padding: 1vh ;
-    background: #efecdb;
-    box-shadow: 0 10px 50px #5f2f1182;
-  }
-  img {
+    padding: 1px;
+    background: #797979;
+    box-shadow: 0 10px 50px #95959582;
+}
+
+/* aqui aplica o filtro nas imagens */
+img {
     max-width: 45vh;
     max-height: 50vh;
     transition: .5s;
     vertical-align: top;
-    filter: saturate(40%) sepia(30%) hue-rotate(5deg);
-  }
+    filter: grayscale(90%)
+}
 
+/* tira o filtro das imagens quando passa o mouse */
+a:hover img {
+    filter: none;
+}
+
+/* da o movimento as imagens */
 .img-wrapper:hover {
     min-height: 65vh;
 }
