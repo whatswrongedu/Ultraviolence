@@ -1,0 +1,104 @@
+/* fonte Montserrat do Google Fonts */
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Montserrat, Arial, Helvetica, sans-serif;
+}
+
+header {
+    position: fixed;
+    background-color: black;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 20px;
+    align-items: center;
+    z-index: 1000;
+}
+
+header img {
+    width: 200px;
+}
+
+.header-navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: black;
+    padding: 12px;
+}
+
+.header-search {
+    display: flex;
+    align-items: center;
+    width: 364px;
+    height: 48px;
+    margin-left: 8px;
+    background-color: #141414;
+    border-radius: 10px;
+    border: 1px solid transparent;
+}
+
+.header-search img {
+    width: 16px;
+    height: 16px;
+    margin-left: 10px;
+}
+
+.header-search input {
+    background: transparent;
+    border: none;
+    padding: 0px 100px 0px 12px;
+    color: white;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    outline: none;
+}
+
+.icon,
+a {
+    font-size: 1.1rem;
+    color: white;
+}
+
+.header-link {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.btn-header,
+a {
+    display: inline-block;
+    padding: 8px 15px;
+    text-decoration: none;
+    color: black;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.btn-header {
+    background-color: white;
+}
+
+/* Isso aqui coloca uma bordinha mais bonita e elegante no header do site */
+header::after {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 100px;
+    right: 100px;
+    height: 0.10px;
+    background-color: #666666;
+}
+
+/* ___________________________________________________________________________________________________________ */
+
+body{
+    background-color: black;
+}
