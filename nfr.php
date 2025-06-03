@@ -1,3 +1,14 @@
+<?php
+require 'src/php/connection.php';
+session_start();
+if (!isset($_SESSION['usuario_id'])) {
+    echo "Sessão não iniciada.";
+    exit;
+} else {
+    echo "Sessão ativa para o usuário: " . $_SESSION['usuario_email'];
+}
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 

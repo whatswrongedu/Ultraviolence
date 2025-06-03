@@ -1,3 +1,14 @@
+<?php
+require 'src/php/connection.php';
+session_start();
+if (!isset($_SESSION['usuario_id'])) {
+    echo "Sessão não iniciada.";
+    exit;
+} else {
+    echo "Sessão ativa para o usuário: " . $_SESSION['usuario_email'];
+}
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -5,7 +16,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ultraviolence</title>
-    <link rel="stylesheet" href="src/css/testHome/testHome.css">
+    <link rel="stylesheet" href="src/css/home/ho-main.css">
     <link rel="stylesheet" href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css" />
 </head>
 
@@ -58,7 +69,7 @@
                 </a>
             </div>
             <div class="img-wrapper slower">
-                <a href="testNFR.html">
+                <a href="nfr.php">
                     <img src="https://m.media-amazon.com/images/I/91XkHPMMSnL.jpg" alt="Norman F***ing Rockwell! Album">
                 </a>
             </div>

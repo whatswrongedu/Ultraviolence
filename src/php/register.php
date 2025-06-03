@@ -46,14 +46,14 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 <body>
     <main>
         <h2 class="cadConcluido">Cadastro feito com sucesso!</h2>
-        <h3>Desfrute dessa experiência ímpar</h3>
         <div class="successImg">
             <img src="https://66.media.tumblr.com/fd2819673aa6e9a28f5baf559d6f5b26/tumblr_pd83f69WdI1wk694yo2_r3_540.gif"
-            alt="Lana smoking"/>
+                alt="Lana smoking" />
         </div>
         <div class="btn-header">
-            <a href="login.html" class="loginLink">Faça seu login</a>
+            <a href="../../login.php" class="loginLink">Faça seu login</a>
         </div>
     </main>
 </body>
+
 </html>
