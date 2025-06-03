@@ -10,7 +10,7 @@
 
 header {
     position: fixed;
-    background-color: black;
+    background-color: rgba(0, 0, 0, 0.644);
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -27,7 +27,7 @@ header img {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: black;
+    background-color: rgba(0, 0, 0, 0);
     padding: 12px;
 }
 
@@ -37,7 +37,7 @@ header img {
     width: 364px;
     height: 48px;
     margin-left: 8px;
-    background-color: #141414;
+    background-color: #141414a1;
     border-radius: 10px;
     border: 1px solid transparent;
 }
@@ -98,7 +98,75 @@ header::after {
 }
 
 /* ___________________________________________________________________________________________________________ */
-
 body{
     background-color: black;
 }
+
+main {
+    padding-top: 100px;
+  }
+  
+  .wallpaper {
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+    background-size: cover;
+    transform: translateZ(0) scale(1);
+  }
+  
+  .background {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+  }
+  
+  .background img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    z-index: 1;
+  }
+  
+  .background h1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 3rem;
+    color: white;
+    z-index: 2;
+    margin: 0;
+    text-align: center;
+    white-space: nowrap;
+    opacity: 0;
+    animation: fadeIn 1s forwards;
+  }
+  
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+      rgba(35, 202, 224, 0.25) 0%,
+      rgba(255, 116, 161, 0.25) 86%,
+      rgba(1, 0, 0, 0.25) 100%
+    );
+    z-index: 2;
+  }
+
+
+  .line {
+    width: 100%;
+    min-height: 60vh;
+    background-color: black;
+  }
+  
+  @keyframes fadeIn {
+    to {
+      opacity: 1;
+    }
+  }
