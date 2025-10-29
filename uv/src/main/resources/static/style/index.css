@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap');
+/* fonte Montserrat do Google Fonts */
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Montserrat, Arial, Helvetica, sans-serif;
+}
+
+.welcome {
+  background-image: url('https://i.ebayimg.com/images/g/WOgAAOSwGdFgu3i-/s-l1200.jpg');
+}
+
+.logo {
+  background-image: url('https://www.dafont.com/forum/attach/orig/3/8/388253.jpg');
+}
+
+.jacare {
+  background-image: url('https://giffiles.alphacoders.com/951/9518.gif');
+}
+
+.btd {
+  background-image: url('https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExNmJncGE5YWhqZzEwdTVncDlmZ2c4ejlwOXJraHk2Z3ZuN2x3bWp4MSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/wC4zuiwjuaHFS/giphy.gif');
+}
+
+footer{
+    background-image: url('https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExZzZudnYxbjQ0MGV3Y2N0dDdpanFmdzFiOGV6aTJ1aG83a2F2bWFxcyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/d9N6EUdvbxC4SYq9HO/giphy.gif');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; 
+}

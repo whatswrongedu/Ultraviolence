@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap');
+/* fonte Montserrat do Google Fonts */
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Montserrat, Arial, Helvetica, sans-serif;
+}
+
+body{
+    background-image: url('https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExYmptamxva29xbDUxeWp0cTh4MjI2cHR2NTV6ZmQ5dDVjcWY3djFibyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/Kx4eEsM11o0ahK7KAM/giphy.gif');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; 
+}
+
+.custom-navbar::after {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 100px;
+    right: 100px;
+    height: 0.10px;
+    background-color: #666666;
+}
+/* esse código adiciona uma bordinha estilosa e responsiva no navbar */

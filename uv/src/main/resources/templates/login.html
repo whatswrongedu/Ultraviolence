@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Login - Ultraviolence</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link href="style/registerLogin.css" rel="stylesheet" type="text/css" media="all">
+</head>
+
+<body class="bg-black text-white font-bold">
+
+    <nav class="custom-navbar fixed top-0 left-0 w-full 
+            py-2.5 px-5 flex justify-center z-50
+            bg-black bg-opacity-30  backdrop-blur-md">
+        <div class="navbar-container w-full max-w-6xl flex justify-between items-center">
+            <a class="navbar-brand" href="/">
+                <img src="https://www.dafont.com/forum/attach/orig/3/8/388253.jpg" alt="Ícone" class="w-52">
+            </a>
+            <div class="navbar-links flex gap-5 items-center">
+                <a class="nav-link text-white no-underline text-lg font-bold py-2 px-4 rounded-md transition-colors duration-300 hover:bg-neutral-800"
+                    href="/store">Catálogo</a>
+                <a class="nav-link text-white no-underline text-lg font-bold py-2 px-4 rounded-md transition-colors duration-300 hover:bg-neutral-800"
+                    href="/register">Cadastre-se</a>
+                <a class="nav-link text-white no-underline text-lg font-bold py-2 px-4 rounded-md transition-colors duration-300 hover:bg-neutral-800"
+                    href="/readUser">Clientes</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="flex flex-col justify-center min-h-screen text-center pt-[100px] pb-12 px-4 md:px-24 lg:px-[150px]">
+
+        <div class="navigation z-8 grid grid-cols-1 md:grid-cols-2 items-center gap-12 p-8 text-left">
+
+            <div class="lanaGifs w-full py-1.5 flex flex-col items-center mb-4 gap-y-4">
+
+                <img src="https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExYzRvaWwydzc3cGRsd2E2cWYwZ2d6d2tyZDNsZjY2eTN5dXoxc3dpaSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/l2RnJEQK4G98Xae0E/giphy.gif"
+                    alt="smoking lana" class="w-full max-w-sm">
+                <img src="https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExeWlsbWxoMmxncDk3cjY5aXowNTZjcWw0b2gzN2E2Nnc2aWc3ZXFqYSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/3osBLby1aYIbJH0Hza/giphy.gif"
+                    alt="lana singing" class="w-full max-w-sm">
+                <img src="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExeG9nbmVpcWQ0Y3I1b3F2MWdqNDh2ZTA2eHlzdTBiNDc4eHBlNzl5NCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/3osBLxumSv59yvz7Y4/giphy.gif"
+                    alt="lana facecard" class="w-full max-w-sm">
+
+            </div>
+
+            <div class="form">
+
+                <h2 class="text-2xl mb-6 text-white">Faça seu login</h2>
+                <form method="POST">
+
+                    <div class="form-group mb-5">
+                        <label for="email" class="block mb-2 text-gray-400 font-normal text-sm">Email:</label>
+                        <input type="email" id="email" name="email" required class="w-full py-3 px-4 rounded-lg text-white text-base transition duration-300 ease-in-out 
+                          border border-white/20 bg-black bg-opacity-30 backdrop-blur-md
+                          focus:outline-none focus:border-white/60 focus:ring-2 focus:ring-white/30">
+                    </div>
+
+                    <div class="form-group mb-5">
+                        <label for="senha" class="block mb-2 text-gray-400 font-normal text-sm">Senha:</label>
+                        <input type="password" id="senha" name="senha" required class="w-full py-3 px-4 rounded-lg text-white text-base transition duration-300 ease-in-out 
+                          border border-white/20 bg-black bg-opacity-30 backdrop-blur-md
+                          focus:outline-none focus:border-white/60 focus:ring-2 focus:ring-white/30">
+                    </div>
+
+                    <button type="submit" class="button w-full py-3.5 px-5 mt-4 text-base rounded-lg
+                       border border-white/80 bg-black bg-opacity-30 backdrop-blur-md
+                       text-white transition-colors duration-300 
+                       hover:bg-white hover:text-black">
+                        Fazer Login
+                    </button>
+                </form>
+            </div>
+        </div>
+        </div>
+    </main>
+
+</body>
+</html>

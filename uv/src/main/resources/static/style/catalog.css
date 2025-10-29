@@ -1,0 +1,37 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap');
+/* fonte Montserrat do Google Fonts */
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Montserrat, Arial, Helvetica, sans-serif;
+}
+
+.custom-navbar::after {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 100px;
+    right: 100px;
+    height: 0.10px;
+    background-color: #666666;
+}
+/* esse código adiciona uma bordinha estilosa e responsiva no navbar */
+
+
+.album {
+  background-image: url('https://64.media.tumblr.com/65ef37e0cc180197cc7275aa4e112518/e023a74c233a21e3-7a/s500x750/1d1cb58d6014bba7f4daf341bd3ba249e4ae5a5b.gif');
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
+.animate-fadeIn {
+    animation: fadeIn 4s forwards;
+}
+/* efeitinho do nome do album, faz levar 4s para aparecer por completo */
