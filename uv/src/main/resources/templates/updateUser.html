@@ -10,23 +10,49 @@
 
     <link th:href="@{/style/updateUser.css}" rel="stylesheet" type="text/css" media="all">
     <!-- por estarmos usando o thymeleaf.org, é necessário usar o th:href="@{ para que o spring econtre o arquivo css -->
-    </head>
+</head>
 
 <body class="bg-black text-white font-bold">
 
-    <nav
+    <nav x-data="{ isMenuOpen: false }"
         class="custom-navbar fixed top-0 left-0 w-full py-2.5 px-5 flex justify-center z-50 bg-black bg-opacity-30 backdrop-blur-md">
-        <div class="navbar-container w-full max-w-6xl flex justify-between items-center">
+
+        <div class="navbar-container w-full max-w-6xl flex justify-between items-center flex-wrap">
+
             <a class="navbar-brand" href="/">
                 <img src="https://www.dafont.com/forum/attach/orig/3/8/388253.jpg" alt="Ícone" class="w-52">
             </a>
-            <div class="navbar-links flex gap-5 items-center">
-                <a class="nav-link text-white no-underline text-lg font-bold py-2 px-4 rounded-md transition-colors duration-300 hover:bg-neutral-800"
-                    href="/store">Catálogo</a>
-                <a class="nav-link text-white no-underline text-lg font-bold py-2 px-4 rounded-md transition-colors duration-300 hover:bg-neutral-800"
-                    href="/register">Cadastre-se</a>
-                <a class="nav-link text-white no-underline text-lg font-bold py-2 px-4 rounded-md transition-colors duration-300 hover:bg-neutral-800"
-                    href="/readUser">Clientes</a>
+
+            <button id="menu-toggle" type="button" @click="isMenuOpen = !isMenuOpen" :aria-expanded="isMenuOpen" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm 
+                       text-white rounded-md md:hidden 
+                       hover:bg-neutral-800 hover:text-white 
+                       focus:outline-none 
+                       focus:ring-2 
+                       focus:ring-neutral-800" aria-controls="mobile-menu">
+                <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
+                    viewBox="0 0 17 14">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M1 1h15M1 7h15M1 13h15" />
+                </svg>
+            </button>
+
+            <div class="navbar-links w-full md:flex md:w-auto md:items-center" id="mobile-menu"
+                :class="{'hidden': !isMenuOpen}">
+
+                <ul class="flex flex-col w-full mt-4 font-medium md:flex-row md:gap-5 md:mt-0 md:w-auto">
+                    <li>
+                        <a class="nav-link block text-white no-underline text-lg font-bold py-2 px-4 rounded-md transition-colors duration-300 hover:bg-neutral-800 md:text-left text-center"
+                            href="/store">Catálogo</a>
+                    </li>
+                    <li>
+                        <a class="nav-link block text-white no-underline text-lg font-bold py-2 px-4 rounded-md transition-colors duration-300 hover:bg-neutral-800 md:text-left text-center"
+                            href="/register">Cadastre-se</a>
+                    </li>
+                    <li>
+                        <a class="nav-link block text-white no-underline text-lg font-bold py-2 px-4 rounded-md transition-colors duration-300 hover:bg-neutral-800 md:text-left text-center"
+                            href="/readUser">Clientes</a>
+                    </li>
+                </ul>
             </div>
         </div>
     </nav>
@@ -46,44 +72,43 @@
 
             <div class="form">
                 <h2 class="text-2xl mb-6 text-white">Alterar dados do cadastro</h2>
-                
+
                 <form method="POST" th:object="${usuario}" th:action="@{'/updateUser/' + ${usuario.idUser}}">
 
                     <input type="hidden" th:field="*{idUser}" />
 
                     <div class="form-group mb-5">
                         <label for="nome" class="block mb-2 text-gray-400 font-normal text-sm">Nome Completo:</label>
-                        <input type="text" id="nome" th:field="*{nome}" required 
-                               class="w-full py-3 px-4 rounded-lg text-white text-base transition duration-300 ease-in-out 
+                        <input type="text" id="nome" th:field="*{nome}" required class="w-full py-3 px-4 rounded-lg text-white text-base transition duration-300 ease-in-out 
                                       border border-white/20 bg-black bg-opacity-30 backdrop-blur-md
                                       focus:outline-none focus:border-white/60 focus:ring-2 focus:ring-white/30">
                     </div>
 
                     <div class="form-group mb-5">
                         <label for="cpf" class="block mb-2 text-gray-400 font-normal text-sm">CPF:</label>
-                        <input type="text" id="cpf" th:field="*{cpf}" required 
-                               class="w-full py-3 px-4 rounded-lg text-white text-base transition duration-300 ease-in-out 
+                        <input type="text" id="cpf" th:field="*{cpf}" required class="w-full py-3 px-4 rounded-lg text-white text-base transition duration-300 ease-in-out 
                                       border border-white/20 bg-black bg-opacity-30 backdrop-blur-md
                                       focus:outline-none focus:border-white/60 focus:ring-2 focus:ring-white/30">
                     </div>
 
                     <div class="form-group mb-5">
                         <label for="email" class="block mb-2 text-gray-400 font-normal text-sm">Email:</label>
-                        <input type="email" id="email" th:field="*{email}" required 
-                               class="w-full py-3 px-4 rounded-lg text-white text-base transition duration-300 ease-in-out 
+                        <input type="email" id="email" th:field="*{email}" required class="w-full py-3 px-4 rounded-lg text-white text-base transition duration-300 ease-in-out 
                                       border border-white/20 bg-black bg-opacity-30 backdrop-blur-md
                                       focus:outline-none focus:border-white/60 focus:ring-2 focus:ring-white/30">
                     </div>
 
-                    <button type="submit" 
-                            class="button w-full py-3.5 px-5 mt-4 text-base rounded-lg border border-white/80 bg-black bg-opacity-30
+                    <button type="submit"
+                        class="button w-full py-3.5 px-5 mt-4 text-base rounded-lg border border-white/80 bg-black bg-opacity-30
                                    backdrop-blur-md text-white transition-colors duration-300 hover:bg-white hover:text-black">
-                        Realizar alterações
+                        Realizar alteração
                     </button>
                 </form>
             </div>
         </div>
     </main>
+
+    <script src="//unpkg.com/alpinejs" defer></script>
 
 </body>
 
